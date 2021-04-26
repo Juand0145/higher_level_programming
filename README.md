@@ -1,4 +1,3 @@
 ## Welcome to holbertonschool-higher_level_programming
 
-In this repository we will find a series of directoryes focusing in a academic
-structure focusin in learning python langaguge
+In this repository, we will find a list of directories with the entire academic purpose to learn python language. 
