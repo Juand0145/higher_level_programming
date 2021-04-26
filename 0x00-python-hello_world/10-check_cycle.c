@@ -3,7 +3,10 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- *
+ * check_cycle - is a function in C that checks if a
+ * singly linked list has a cycle in it.
+ * @list: the start of the linked list.
+ * Return: 0 if is not a cycle and 1 if it is a cycle
  */
 int check_cycle(listint_t *list)
 {
