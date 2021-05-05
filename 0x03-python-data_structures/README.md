@@ -1,6 +1,6 @@
 ## Learning objectives
 
-In this directory, we will find a compilation of files that will help us to understand the data structures work in python and how to use them in lits and help us to answer the next questions:
+In this directory, we will find a compilation of files that will help us to understand the data structures work in python and how to use them in lists and help us to answer the next questions:
 
  1. -   What are lists and how to use them
  2. -   What are the differences and similarities between strings and lists
