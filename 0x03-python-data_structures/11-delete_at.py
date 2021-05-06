@@ -6,6 +6,6 @@ def delete_at(my_list=[], idx=0):
     if idx < 0 or idx > n_elements:
         return my_list
 
-    my_list.pop(idx)
+    del(my_list[idx])
 
     return(my_list)
