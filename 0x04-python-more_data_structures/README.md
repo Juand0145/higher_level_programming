@@ -2,16 +2,16 @@
 
 In this directory, we will find a compilation of files that will help us to understand more concepts of data structures and how they work in python and how to use them in lits and help us to answer the next questions:
 
- 1.   What are set and how to use them
- 2.   What are the most common methods of set and how to use them
- 3.   When to use sets versus lists
- 4.   How to iterate into a set
- 5.   What are dictionary and how to use them
- 6.   When to use dictionaries versus lists or sets
- 7.   What is a key in a dictionary
- 8.   How to iterate into a dictionary
- 9.   What is a lambda function
- 10. What is map, reduce and filter functions 
+ 1.   What are set and how to use them.
+ 2.   What are the most common methods of set and how to use them.
+ 3.   When to use sets versus lists.
+ 4.   How to iterate into a set.
+ 5.   What are dictionary and how to use them.
+ 6.   When to use dictionaries versus lists or sets.
+ 7.   What is a key in a dictionary.
+ 8.   How to iterate into a dictionary.
+ 9.   What is a lambda function.
+ 10. What is map, reduce and filter functions.
 ## Files
 
  - 0-square_matrix_simple.py is a function that computes the square value of all integers of a matrix.
