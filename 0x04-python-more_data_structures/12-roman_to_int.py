@@ -13,10 +13,10 @@ def roman_to_int(roman_string):
 
     for j in range(n_characters):
         if j > 0 and roman_dictionary[roman_string[j]]\
-             > roman_dictionary[roman_string[j - 1]]:
-             
+         > roman_dictionary[roman_string[j - 1]]:
+
             translate += roman_dictionary[roman_string[j]]\
-                 - 2 * roman_dictionary[roman_string[j-1]]
+             - 2 * roman_dictionary[roman_string[j-1]]
 
         else:
             translate += roman_dictionary[roman_string[j]]
