@@ -15,5 +15,5 @@ class Square:
             self.__size = size
 
     def area(self):
-        """A new Object call: area= size ^ 2"""
+        """A new Method call: area= size ^ 2"""
         return (self.__size * self.__size)
