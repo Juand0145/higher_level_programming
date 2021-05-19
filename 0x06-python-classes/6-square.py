@@ -53,8 +53,5 @@ class Square:
                 any(map(lambda x: x < 0, value)):
             raise TypeError("position must be a tuple of 2 positive integers")
 
-        if any(map(lambda x: type(x) != int, value)):
-            raise TypeError("position must be a tuple of 2 positive integers")
-
         else:
             self.__position = value
