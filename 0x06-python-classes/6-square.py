@@ -2,9 +2,6 @@
 """Create a square class"""
 
 
-from typing import Tuple, Type
-
-
 class Square:
     """Creating a privates instances atributes: size and position"""
     def __init__(self, size=0, position=(0, 0)):
