@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 def is_safe(board, row, column):
 
-    for c in range(column):
-        if board[c] is row or abs(board[c] - row) is abs(c - column):
+    for queen in range(column):
+        if board[queen] == row or abs(board[queen] - row) == abs(queen - column):
             return False
 
     return True
@@ -10,7 +10,7 @@ def is_safe(board, row, column):
 
 def check_board(board, column, n):
 
-    if column is n:
+    if column == n:
         print(str([[c, board[c]] for c in range(n)]))
         return
 
@@ -21,8 +21,6 @@ def check_board(board, column, n):
 
 if __name__ == "__main__":
     import sys
-
-    n = 0
 
     try:
         n = int(sys.argv[1])
