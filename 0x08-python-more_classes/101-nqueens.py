@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 def is_safe(board, row, column):
 
-    for Que in range(column):
-        if board[Que] == row or abs(board[Que] - row) == abs(Que - column):
+    for queen in range(column):
+        if board[queen] == row or\
+             abs(board[queen] - row) == abs(queen - column):
             return False
 
     return True
