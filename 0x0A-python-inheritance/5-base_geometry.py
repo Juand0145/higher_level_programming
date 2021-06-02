@@ -3,5 +3,5 @@
 
 
 class BaseGeometry:
-    ''''EMpry class'''
+    ''''Empty class'''
     pass
