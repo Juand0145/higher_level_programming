@@ -131,3 +131,8 @@ class Rectangle(Base):
                     self.__y = value
                 if atribute_name == "id":
                     self.id = value
+
+    def to_dictionary(self):
+        '''Return teh dictionary taht represent the rectangle'''
+        atributes = ["id", "width", "height", "x", "y"]
+        return {key: getattr(self, key) for key in atributes}
