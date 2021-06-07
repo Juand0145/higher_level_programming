@@ -29,7 +29,7 @@ class Rectangle(Base):
             raise TypeError("width must be an integer")
 
         if width <= 0:
-            raise ValueError ("width must be > 0")
+            raise ValueError("width must be > 0")
 
     @property
     def height(self):
@@ -43,7 +43,7 @@ class Rectangle(Base):
             raise TypeError("height must be an integer")
 
         if height <= 0:
-            raise ValueError ("height must be > 0")
+            raise ValueError("height must be > 0")
 
     @property
     def x(self):
@@ -57,7 +57,7 @@ class Rectangle(Base):
             raise TypeError("x must be an integer")
 
         if x < 0:
-            raise ValueError ("x must be >= 0")
+            raise ValueError("x must be >= 0")
 
     @property
     def y(self):
@@ -71,7 +71,7 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
 
         if value < 0:
-            raise ValueError ("y must be >= 0")
+            raise ValueError("y must be >= 0")
 
     def area(self):
         '''Public instance Method that evaluate the area of the rectangle'''
@@ -85,7 +85,7 @@ class Rectangle(Base):
 
         else:
             if self.__y > 0:
-                print ((self.__y - 1) * '\n')
+                print((self.__y - 1) * '\n')
             for i in range(self.__height):
                 print(self.__x * ' ' + self.__width * '#')
 
@@ -100,5 +100,34 @@ class Rectangle(Base):
 
         return data
 
-    
+    def update(self, *args, **kwargs):
+        '''Update the atributes in the current instance
+        Arguments:
+            *args: argument to update'''
+        atributes = ["id", "width", "height", "x", "y"]
+        dic = zip(atributes, args)
 
+        for atribute_name, value in dic:
+            if atribute_name == "width":
+                self.__width = value
+            if atribute_name == "height":
+                self.__height = value
+            if atribute_name == "x":
+                self.__x = value
+            if atribute_name == "y":
+                self.__y = value
+            if atribute_name == "id":
+                self.id = value
+
+        if kwargs is not None:
+            for atribute_name, value in kwargs.items():
+                if atribute_name == "width":
+                    self.__width = value
+                if atribute_name == "height":
+                    self.__height = value
+                if atribute_name == "x":
+                    self.__x = value
+                if atribute_name == "y":
+                    self.__y = value
+                if atribute_name == "id":
+                    self.id = value
