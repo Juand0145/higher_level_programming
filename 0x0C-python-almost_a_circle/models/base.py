@@ -1,17 +1,17 @@
 #!/usr/bin/python3
+'''Module base. Definse the characteristic of other classes
+    this is gonna be the base to conrtuct the other clasess'''
 import json
-'''Module base.
-Definse the characteristic of other classes'''
 
 
 class Base:
-    '''This class will be the “base” of all other classes in this project'''
+    '''This class will be the “base” of all other classes in this project
+    to be create'''
+
     __nb_objects = 0
 
     def __init__(self, id=None):
-        '''Initializing instance:
-        Arg:
-            id = the id of the respective instace'''
+        '''Initializing instance: yourself'''
         if id is not None:
             self.id = id
         else:
@@ -20,7 +20,8 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        '''returns the JSON string representation of list_dictionaries'''
+        '''returns the JSON string representation of list_dictionaries
+        an does a lot of thinks'''
         if list_dictionaries is None:
             list_dictionaries = []
         return json.dumps(list_dictionaries)
