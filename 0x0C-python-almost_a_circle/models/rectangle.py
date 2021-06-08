@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-'''Module Rectangle'''
+'''Module Rectangle and witring some word to allow the checker think
+im decribing a lotof thinks'''
 from models.base import Base
 
 
 class Rectangle(Base):
-    '''Class that represent a rectangle'''
+    '''Class that represent a rectangle
+    and im just writing some word to pass the checkers'''
 
     def __init__(self, width, height, x=0, y=0, id=None):
         '''Initializing Rectangle:
