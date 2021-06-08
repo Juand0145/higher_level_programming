@@ -31,7 +31,8 @@ class Square(Rectangle):
         return s
 
     def update(self, *args, **kwargs):
-        '''Update the atrbutes in the instance square'''
+        '''Update the atrbutes in the instance square
+        im just putting some words to confirm the check is running'''
         atributes = ["id", "size", "x", "y"]
         dic = zip(atributes, args)
 
