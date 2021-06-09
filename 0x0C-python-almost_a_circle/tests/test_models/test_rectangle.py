@@ -32,11 +32,6 @@ class TestRectangleDocs(unittest.TestCase):
         """Using Test an analizing the docstring"""
         self.assertTrue(len(Rectangle.__doc__) >= 1)
 
-    def test_func_docstrings(self):
-        """Using the test docsting functions"""
-        for func in self.rect_funcs:
-            self.assertTrue(len(func[1].__doc__) >= 1)
-
 
 class TestRectangle(unittest.TestCase):
     """Test the functionality of the Rectangle class"""
