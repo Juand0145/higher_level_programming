@@ -2,6 +2,9 @@
 '''Module base. Definse the characteristic of other classes
     this is gonna be the base to conrtuct the other clasess'''
 import json
+from os import path
+import csv
+
 
 
 class Base:
@@ -71,3 +74,36 @@ class Base:
 
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Function that deserializesin CSV,
+        save instances to a CSV file"""
+        if list_objs is None:
+            list_objs = []
+
+        if cls.__name__ == 'Rectangle':
+            attrs = ('id', 'width', 'height', 'x', 'y')
+        elif cls.__name__ == 'Square':
+            attrs = ('id', 'size', 'x', 'y')
+        list_objs = ([getattr(o, a) for a in attrs] for o in list_objs)
+        with open(cls.__name__ + '.csv', 'wt', newline='') as file:
+            writer = csv.writer(file)
+            for row in list_objs:
+                writer.writerow(row)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Function that serializes in CSV,
+        load from a CSV file"""
+        if not path.exists(cls.__name__ + '.csv'):
+            return []
+        if cls.__name__ == 'Rectangle':
+            attrs = ('id', 'width', 'height', 'x', 'y')
+        elif cls.__name__ == 'Square':
+            attrs = ('id', 'size', 'x', 'y')
+        with open(cls.__name__ + '.csv', 'rt', newline='') as my_file:
+            reader = csv.reader(my_file)
+            my_objects = list(reader)
+        my_objects = ((int(i) for i in l) for l in my_objects)
+        return [cls.create(**dict(zip(attrs, l))) for l in my_objects]
