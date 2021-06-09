@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+'''Testing file for the rectangle class'''
+
+
 import unittest
 import pep8
 import inspect
