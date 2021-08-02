@@ -8,5 +8,5 @@ const number = process.argv[2];
 if (!parseInt(number)) {
   console.log('Not a number');
 } else {
-  console.log('My number ' + number);
+  console.log('My number: ' + number);
 }
