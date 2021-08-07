@@ -9,6 +9,7 @@ Base = declarative_base()
 
 
 class State(Base):
+    """A class call state that create the table in MySQL"""
     __tablename__ = "states"
     id = Column(Integer,
                 unique=True,
