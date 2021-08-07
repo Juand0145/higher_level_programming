@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-
 """Is a a script that takes in the name of a state as an argument
 and lists all cities of that state, using the database hbtn_0e_4_usa"""
+
+from MySQLdb import DATE
+
 if __name__ == '__main__':
 
     import MySQLdb
@@ -13,12 +15,11 @@ if __name__ == '__main__':
                          db=argv[3])
 
     cur = db.cursor()
-    cur.execute("SELECT cities.name FROM cities JOIN\
-         states ON states.id = cities.state_id WHERE\
-              states.name = 'Texas' ORDER BY cities.id ASC")
+    cur.execute("SELECT cities.name FROM cities JOIN states \
+        ON states.id = cities.state_id WHERE states.name = '{}' \
+            ORDER BY cities.id ASC".format(argv[4]))
     rows = cur.fetchall()
 
-    for row in rows:
-        print(row)
+    print(", ".join(row[0] for row in rows))
 
     db.close()
