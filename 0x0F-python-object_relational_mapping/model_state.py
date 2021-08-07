@@ -4,7 +4,6 @@ and an instance Base = declarative_base()"""
 
 from sqlalchemy import Integer, Column, String
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.sql.elements import collate
 
 Base = declarative_base()
 
