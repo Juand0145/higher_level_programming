@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-"""Is a script that lists all states with a name starting with N (upper N)
-from the database hbtn_0e_0_usa"""
+"""Is a script that takes in an argument and displays all values in the states
+table of hbtn_0e_0_usa where name matches the argument."""
 if __name__ == '__main__':
 
     import MySQLdb
@@ -13,9 +13,9 @@ if __name__ == '__main__':
                          db=argv[3])
 
     cur = db.cursor()
-    cur.execute(
-        "SELECT * FROM states WHERE {argv[4]}\
-                ORDER BY states.id ASC")
+    cur.execute("SELECT cities.id, cities.name, states.name FROM\
+         cities LEFT JOIN states ON states.id = cities.state_id\
+         ORDER BY cities.id ASC;")
     rows = cur.fetchall()
 
     for row in rows:
