@@ -3,10 +3,8 @@
 the class definition of a City"""
 
 from sqlalchemy import Integer, Column, String
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.sql.coercions import StrAsPlainColumnImpl
 from sqlalchemy.sql.schema import ForeignKey
-from model_state import Base, State
+from model_state import Base
 from sqlalchemy.orm import relationship
 
 

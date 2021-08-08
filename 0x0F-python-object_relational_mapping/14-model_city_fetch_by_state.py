@@ -2,9 +2,6 @@
 """Is a script 14-model_city_fetch_by_state.py that prints all City objects
 from the database hbtn_0e_14_usa"""
 
-from sqlalchemy.orm.session import Session
-from sqlalchemy.sql.schema import MetaData
-
 
 if __name__ == "__main__":
 
