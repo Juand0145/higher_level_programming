@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 """Is a Python script that fetches https://intranet.hbtn.io/status"""
 
-from urllib import request
+import requests
 
 if __name__ == "__main__":
 
-    with request.urlopen("https://intranet.hbtn.io/status") as response:
-        value = response.read()
+    req = requests.get("https://api.github.com/user")
 
     print("Body response:")
-    print("\t- type: {}".format(type(value)))
-    print("\t- content: {}".format(value))
+    print("\t- type: {}".format(type(req.text)))
+    print("\t- content: {}".format(req.text))
