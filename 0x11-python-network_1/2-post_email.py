@@ -6,7 +6,7 @@ from urllib import parse, request
 from sys import argv
 
 if __name__ == "__main__":
-    values = {"email ": argv[2]}
+    values = {"email": argv[2]}
     email = parse.urlencode(values).encode()
     req = request.Request(argv[1], email)
 
