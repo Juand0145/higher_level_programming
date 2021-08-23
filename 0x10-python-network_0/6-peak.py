@@ -4,13 +4,26 @@
 
 def find_peak(list):
     """Function that find the biggest element in a list"""
-    if len(list) == 0 or list is None:
+    if list is None or list == []:
         return None
 
-    biggest_number = list[0]
+    lo = 0
+    hi = len(list)
+    mid = ((hi - lo) // 2) + lo
+    mid = int(mid)
 
-    for number in list:
-        if number > biggest_number:
-            biggest_number = number
+    if hi == 1:
+        return list[0]
 
-    return biggest_number
+    if hi == 2:
+        return max(list)
+
+    if list[mid] >= list[mid - 1] and\
+            list[mid] >= list[mid + 1]:
+        return list[mid]
+
+    if mid > 0 and list[mid] < list[mid + 1]:
+        return find_peak(list[mid:])
+
+    if mid > 0 and list[mid] < list[mid - 1]:
+        return find_peak(list[:mid])
